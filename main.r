@@ -1,3 +1,11 @@
+# Loading required package: caret
+# Loading required package: lattice
+# Loading required package: ggplot2
+
+require(caret)
+require(lattice)
+require(ggplot2)
+
 get_nth_element_from_all_sublists <- function(big_list, n) {
 	lapply(big_list, function(sublist) {sublist[n]})
 }
