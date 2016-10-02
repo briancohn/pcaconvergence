@@ -1,6 +1,7 @@
 require(caret)
 require(lattice)
 require(ggplot2)
+require(reshape2)
 
 var.percent.df <- data.frame("PC1"=numeric(),"PC2"=numeric(),"PC3"=numeric(),"PC4"=numeric(),"PC5"=numeric(),"PC6"=numeric(),"PC7"=numeric())
 
