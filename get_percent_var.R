@@ -37,3 +37,7 @@ for (i in filenames){
   #print(var.percent)  
   var.percent.df[i,] = var.percent
 }
+
+# converts dataframe to appropriate form for stacked bar plot
+
+var.percent.df.melt <- t(var.percent.df)
