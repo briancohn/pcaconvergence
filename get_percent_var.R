@@ -42,3 +42,12 @@ for (i in filenames){
 # converts dataframe to appropriate form for stacked bar plot
 
 var.percent.df.melt <- t(var.percent.df)
+
+#makes stacked bar plot
+
+# http://thecoatlessprofessor.com/programming/creating-stacked-barplot-and-grouped-barplot-in-r-using-base-graphics-no-ggplot2/
+
+par(mar=c(5.1, 4.1, 4.1, 7.1), xpd=TRUE)
+prop = prop.table(var.percent.df.melt,margin=2)
+barplot(prop, col=heat.colors(length(rownames(prop))), width=2)
+legend("topright",inset=c(-0.25,0), fill=heat.colors(length(rownames(prop))), legend=rownames(var.percent.df.melt))
